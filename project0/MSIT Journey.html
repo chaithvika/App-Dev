@@ -2,9 +2,25 @@
 <html>
     <head>
         <title>MY MSIT JOURNEY!</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
         <link rel="icon" href="logo.jpeg" type="image/icon type">
         <style>
-
+            @media (min-width: 500px){
+                body {
+                    background-color: lightgrey;
+                }
+                #three::before {
+                        content: "Welcome to my web page!"
+                    } 
+            }
+            @media (max-width: 499px){
+                body {
+                    background-color:lightpink;
+                }
+                #three::before {
+                        content: "Welcome!"
+                    } 
+            }
             @media print {
                 .screen-only {
                     display : none;
@@ -46,7 +62,7 @@
                border : 2px solid black;
                font-family: 'Times New Roman', Times, serif;
                border-collapse : collapse; 
-               width : 30%;
+               width : 35%;
             }
             
             th , td {
@@ -71,7 +87,7 @@
         </header>
     
 
-        <h1 class = "screen-only">Table of Contents: </h1>
+        <h1 id = "three" class = "screen-only"> <br /> Table of Contents: </h1>
         <ul class = "screen-only">
             <li><a href = "#section1">About Me</a></li>
             <li><a href = "#section3">Story on how I joined MSIT.</a></li>
