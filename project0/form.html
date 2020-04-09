@@ -3,8 +3,23 @@
     <head>
         <title>Contact me!</title>
         <style>
+            input[type = "text"], input[type = "email"] {
+                background-color : lightgray;
+            }
+            input[type = "tel"] , input[type = "checkbox"] {
+                background-color :turquoise;
+            }
+            button {
+                background-color :rgb(156, 156, 5);
+            }
+            button:hover , input:hover{
+                background-color:orange;
+            }
             h2, h3  {
                 font-style : italic;
+            }
+            body::selection {
+                background-color: blue;
             }
         </style>
     </head>
