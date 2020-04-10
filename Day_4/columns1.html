@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web Page!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .row > div {
+                padding: 20px;
+                border: 2px solid black;
+                background-color:  rgb(13, 117, 112);
+            }
+            header {
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif, Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background-color: rgb(13, 117, 112);
+            }
+
+            input:hover{
+                background-color:orange;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Course Structure 
+        </header>
+        <h2>
+            To look into the courses semester-wise click accordingly!
+        </h2>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <input name = "sem_1" list = "courses_1" placeholder = "Select to Semester_1">
+                        <datalist id = "courses_1">
+                            <option value = "Computational Thinking">
+                            <option value = "Python">
+                            <option value = "Introdution to Data Science">
+                            <option value = "Object Oriented Programming">
+                            <option value = "Algorithms and Data Structures - 1">
+                        </datalist>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <input name = "sem_2" list = "courses_2" placeholder = "Select to Semester_2">
+                        <datalist id = "courses_2">
+                            <option value = "Database Management Systems">
+                            <option value = "Algorithms and Data Structures - 2">
+                            <option value = "Introduction to Operating Systems">
+                            <option value = "Computer Networks Foundation">
+                            <option value = "Introduction to Cyber Security">
+                            <option value = "Software Application Development">
+                            <option value = "Practicum">
+                        </datalist>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <input name = "sem_3" list = "courses_3" placeholder = "Select to Semester_3">
+                        <datalist id = "courses_3">
+                            <option value = "Specialization">
+                        </datalist>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <input name = "sem_4" list = "courses_4" placeholder = "Select to Semester_4">
+                        <datalist id = "courses_4">
+                            <option value = "Internship">
+                        </datalist>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
