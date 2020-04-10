@@ -8,6 +8,11 @@
         background-color:lightpink;
     }
 }
+body {
+    background-image: url('5.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 a::before {
 content: "Go to \2192 "
 }

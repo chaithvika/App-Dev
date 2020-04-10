@@ -1,5 +1,10 @@
 $font:'Times New Roman', Times, serif, Arial, sans-serif;
 
+body {
+    background-image: url('5.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 a::before {
     content: "Click here \2192 "
 }

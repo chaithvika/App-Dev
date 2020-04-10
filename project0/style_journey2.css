@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body {
+  background-image: url("5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 a::before {
   content: "Click here →"; }
 
