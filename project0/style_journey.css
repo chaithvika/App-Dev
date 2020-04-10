@@ -29,3 +29,7 @@
 body::selection {
     background-color: blue;
 }
+
+.zoom:hover {
+    transform: scale(2.0);
+}
