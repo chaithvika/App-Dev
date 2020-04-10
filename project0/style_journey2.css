@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body {
+  background-image: url("5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+a::before {
+  content: "Click here →"; }
+
+header {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #0d7570; }
+
+p {
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif; }
+
+#one > li {
+  color: red; }
+
+.name {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  color: blue; }
+
+table {
+  border: 2px solid black;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  border-collapse: collapse;
+  width: 35%; }
+
+th,
+td {
+  border: 1px solid black;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  padding: 5px;
+  text-align: center; }
+
+th {
+  background-color: goldenrod;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif; }
+
+/*# sourceMappingURL=style_journey2.css.map */
