@@ -16,6 +16,9 @@
                     background-color:lightpink;
                 }
             }
+            a::before {
+            content: "Go to \2192 "
+            }
             input[type = "text"], input[type = "email"] {
                 background-color : lightgray;
             }
@@ -28,12 +31,21 @@
             button:hover , input:hover{
                 background-color:orange;
             }
-            h2, h3  {
+            h2, h4  {
                 font-style : italic;
             }
             body::selection {
                 background-color: blue;
             }
+            .row > div {
+                align-self: start;
+                padding: 20px;
+                border: 2px solid black;
+                background-color:lightpink;
+            }
+            a::before {
+            content: "Go to \2192 "
+        }
         </style>
     </head>
     <body>
@@ -46,14 +58,14 @@
                 <input name = "email" type = "email" placeholder = "email address" >
                 <button>Submit!</button>
             </div>
-            <h3>Please give in your valuable feedback about my blog to improve!</h3>
+            <h4><br />Please give in your valuable feedback about my blog to improve!</h4>
             <div>
                 
                 <input name = "feedback" type = "checkbox" value = "great"> Great :)
                 <input name = "feedback" type = "checkbox" value = "good"> Good :|
                 <input name = "feedback" type = "checkbox" value = "should improve"> Should Improve :(
             </div>
-            <h3>This part helps us in customization. So please do select one option</h3>
+            <h4><br />This part helps us in customization. So please do select one option</h4>
             <div>
                 <input name = "type" list = "types" placeholder = "Type of the interface">
                 <button>Submit!</button>
@@ -67,6 +79,39 @@
                     </datalist>
             </div>
         </form>
+        <h4> <br /> If you guys want to know more about me, you can go through my profile</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    Github
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href = "https://github.com/chaithvika?tab=projects"> link </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    LinkedIn
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href = "https://www.linkedin.com/in/krishna-chaithvika-lagadapati-465241147/"> link </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    Facebook
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href = "https://www.facebook.com/lagadapati.krishnachaithvika">link</a>
+                </div>
+            </div>
+        </div>
+        <h6 style = "color:red;"><br /> -------------------------------------------<br />Links for navigating through pages:</h6>
+        <footer style = "color: brown">
+            To know about my MSIT journey <a href="MSIT Journey.html">link</a><br />
+            For story of me joining MSIT <a href="MSIT_joining.html">link</a><br />
+            For course structure at MSIT <a href = "Course_structure.html">link</a><br />
+        </footer>
     </body>
 </html>
 
