@@ -1,0 +1,31 @@
+
+
+@media (min-width: 500px) {
+    body {
+        background-color: lightgrey;
+    }
+
+    #three::before {
+        content: "Welcome to my web page!"
+    }
+}
+
+@media (max-width: 499px) {
+    body {
+        background-color: lightpink;
+    }
+
+    #three::before {
+        content: "Welcome!"
+    }
+}
+
+@media print {
+    .screen-only {
+        display: none;
+    }
+}
+
+body::selection {
+    background-color: blue;
+}

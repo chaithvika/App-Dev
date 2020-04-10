@@ -1,0 +1,34 @@
+@charset "UTF-8";
+body a::before {
+  content: "Click here →"; }
+body header {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #0d7570; }
+body p {
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif; }
+body #one > li {
+  color: red; }
+body .name {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  color: blue; }
+body table {
+  border: 2px solid black;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  border-collapse: collapse;
+  width: 35%; }
+body th,
+body td {
+  border: 1px solid black;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+  padding: 5px;
+  text-align: center; }
+body th {
+  background-color: goldenrod;
+  font-family: "Times New Roman", Times, serif, Arial, sans-serif; }
+
+/*# sourceMappingURL=style_jouney2.css.map */

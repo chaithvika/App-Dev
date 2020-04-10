@@ -1,0 +1,40 @@
+@media (min-width: 500px){
+    body {
+        background-color: lightgrey;
+    }
+}
+@media (max-width: 499px){
+    body {
+        background-color:lightpink;
+    }
+}
+a::before {
+content: "Go to \2192 "
+}
+input[type = "text"], input[type = "email"] {
+    background-color : lightgray;
+}
+input[type = "tel"] , input[type = "checkbox"] {
+    background-color :turquoise;
+}
+button {
+    background-color :rgb(156, 156, 5);
+}
+button:hover , input:hover{
+    background-color:orange;
+}
+h2, h4  {
+    font-style : italic;
+}
+body::selection {
+    background-color: blue;
+}
+.row > div {
+    align-self: start;
+    padding: 20px;
+    border: 2px solid black;
+    background-color:lightpink;
+}
+a::before {
+content: "Go to \2192 "
+}

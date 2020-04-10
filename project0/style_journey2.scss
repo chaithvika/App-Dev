@@ -1,0 +1,54 @@
+$font:'Times New Roman', Times, serif, Arial, sans-serif;
+
+a::before {
+    content: "Click here \2192 "
+}
+
+header {
+    font-size: 50px;
+    font-family: $font;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: rgb(13, 117, 112);
+}
+
+p {
+
+    font-family: $font;
+}
+
+#one>li {
+
+    color: red;
+}
+
+.name {
+    font-weight: bold;
+    font-family: $font;
+    color: blue;
+
+}
+
+table {
+
+    border: 2px solid black;
+    font-family: $font;
+    border-collapse: collapse;
+    width: 35%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    font-family: $font;
+    padding: 5px;
+    text-align: center;
+
+}
+
+th {
+    background-color: goldenrod;
+    font-family: $font;
+}
+    
