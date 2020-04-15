@@ -8,7 +8,7 @@ header {
 body{
 	margin:10px;
 	color:#6a6f8c;
-    background-image: url("pic.jpg");
+    background-image: url("static/styles/images/pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font:600 16px/18px 'Open Sans',sans-serif;
