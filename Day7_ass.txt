@@ -1,0 +1,134 @@
+Task 1 Postgresql - Reflection
+
+    ● What is the need for Add Ons in Heroku?
+
+        Heroku add-ons are components that support your application, such as
+        data storage, monitoring, analytics, data processing, and more.
+        These are fully maintained for you by either a third-party provider or by
+        Heroku.
+        Heroku Add-ons are integrated into your Heroku platform experience,
+        making it easy to install new services and manage billing, credentials, or
+        configurations directly from your Heroku Dashboard or CLI. Some of our
+        top add-ons provide extended functionality within Heroku by integrating
+        with the deploy processes, logs, platform API, and more. Many partners
+        offer a ​ free plan​ , so you can easily try out their services.
+        Key features:
+        ● One-click install from the Heroku Dashboard or CLI
+        ● REST API and tooling for easy technical integration
+        ● Integrated billing and fraud expense coverage
+        ● Product discovery through the Heroku Elements Marketplace
+        ● Co-marketing opportunities through Heroku channels
+        ● Access to technical engineering resources
+
+    ● What exactly happens when you click on provision while configuring the
+        Postgres addon?
+
+        When we click on Provision while configuring Postgres addon, the
+        addon will be installed and you will be having a working Postgres
+        Database. We can get credentials from the settings and these are used to
+        login on Adminer.
+
+    ● What is the use of Adminer? How does it work?
+
+        Adminer is a tool for managing contents of MySQL databases, formerly
+        known as phpMinAdmin. It’s a single tiny PHP file. It helps in running SQL
+        queries on a GUI. We can access the databases via Adminer by logging into
+        it using credentials from the Heroku Credentials page.
+
+Task 2 Python and Flask - Reflection
+
+    1. How do I manage to use python 3.6 if I already have python 2.7?
+
+        When Python 3 is installed, if Python 2.7 is already on the Working
+        Framework, choose custom installation and choose a specific place to
+        install. Add route to program environment variables.
+        Python.exe is modified to python2.exe where python2 is located, and
+        python.exe to python3.exe where python3 is located to run all python
+        versions.
+        Enable Python2 –V and Python3 –V to get their respective versions of
+        python.
+
+    2. What is the role of pip and how does it work?
+
+        pip is a standard package-management system used to install and
+        manage software packages written in Python.
+        You use pip with an install command followed by the name of the package
+        you want to install. pip looks for the package in PyPI, calculates its
+        dependencies, and installs them to insure requests will work.
+
+    3. What is the role of requirements.txt and how does it work with pip?
+
+        Requirements files give you a way to create an environment: a set of
+        packages that work together. If you've ever tried to set up an application
+        on a new system, or with slightly updated pieces, and had it fail, pip
+        requirements are for you.
+        Working:
+        1. cd to the directory where requirements.txt is located.
+        2. activate your virtualenv.
+        3. run: pip install -r requirements.txt in your shell.
+
+    4. Which packages are installed and why are they required?
+
+        Flask, Flask-Session, psycopg2-binary and SQLAlchemy are the packages
+        that are installed.Flask is a web framework. This means flask provides you with tools, libraries
+        and technologies that allow you to build a web application. This web
+        application can be some web pages, a blog, a wiki or go as big as a
+        web-based calendar application or a commercial website.
+        The session object of the flask package is used to set and get session data.
+        The session object works like a dictionary but it can also keep track
+        modifications. When we use sessions the data is stored in the browser as a
+        cookie. The cookie used to store session data is known as session cookie.
+        Psycopg is the most popular PostgreSQL database adapter for the Python
+        programming language. It was designed for heavily multi-threaded
+        applications that create and destroy lots of cursors and make a large
+        number of concurrent “INSERT”s or “UPDATE”s.
+        SQLAlchemy is a library that facilitates the communication between Python
+        programs and databases. Most of the times, this library is used as an
+        Object Relational Mapper (ORM) tool that translates Python classes to
+        tables on relational databases and automatically converts function calls
+        to SQL statements.
+
+    5. Which environment variables set for Flask to work? What is the purpose of
+    each variable?
+
+        We use the export command to set environment variables.
+        We set the FLASK_APP variable to tell the start point of the application i.e
+        what file to run after the run command is used.
+        We set the FLASK_DEBUG to 1 to automatically apply a change to the web
+        app when the file is changed or modified.
+        Set up the DATABASE_URL to establish the communication between the
+        flask application and database.
+
+    6. What happens when the Flask run command is issued on the terminal?
+        
+        Once a Flask run command is given on the terminal, a very basic builtin
+        server will be launched.
+
+    7. On which port is Flask running and can it be changed?
+
+        By default, this starts the web server on 127.0. 0.1:5000. Yes it can be
+        changed. To change the host and port, pass flask run in the command.
+        flask run -h localhost -p 3000
+
+    8. How is Flask different from the tiny web server?
+
+        Flask itself directly handles the URL and gets the URI and returns the data
+        accordingly but in the tiny web server, it is us who have done all that part.
+
+Task 3 Goodreads API - Reflection
+
+    1. What are the various categories of web APIs available on good reads?
+
+        API METHODS
+        book.isbn_to_id​ — Get Goodreads book IDs given ISBNs.
+        book.id_to_work_id​ — Get Goodreads work IDs given Goodreads book IDs.
+        book.review_counts​ — Get review statistics given a list of ISBNs.
+        book.show​ — Get the reviews for a book given a Goodreads book id.
+        book.show_by_isbn​ — Get the reviews for a book given an ISBN.
+        book.title​ — Get the reviews for a book given a title string.
+
+    2. Is there a limit on the use of the web API? What are the limits?
+
+        By default, it is set to 100 requests per 100 seconds per user and can be
+        adjusted to a maximum value of 1,000. But the number of requests to the
+        API is restricted to a maximum of 10 requests per second per user.
