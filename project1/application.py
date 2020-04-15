@@ -32,4 +32,5 @@ def register():
     else:
         name = request.form.get("name")
         password = request.form.get("password")
-        return "Hello {}. Your password is encrypted as {}. So don't worry, you are in safe hands".format(name,generate_password_hash(password))
+        val = check_password_hash(generate_password_hash(password), password)
+        return "Hello {}. Your password {} is encrypted as {}. So don't worry, you are in safe hands".format(name,generate_password_hash(password))
