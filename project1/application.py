@@ -1,10 +1,10 @@
 import os
 
-from flask import Flask, session
+from flask import Flask, session , render_template, request
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-
+from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 
 # Check for environment variable
@@ -23,4 +23,14 @@ db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
 def index():
-    return "Project 1: TODO"
+    return "Project 1: TODO. Yayy!!"
+
+@app.route("/register", methods=["GET","POST"])
+def register():
+    if request.method == "GET":
+        return render_template("registration.html")
+    else:
+        name = request.form.get("name")
+        password = request.form.get("password")
+        val = check_password_hash(generate_password_hash(password), password)
+        return "Hello {}. Your password {} is encrypted as {}. So don't worry, you are in safe hands".format(name,generate_password_hash(password))
