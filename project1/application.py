@@ -1,7 +1,5 @@
 import os
-import hashlib
-
-from flask import Flask, session, render_template, request, redirect
+from flask import Flask, session, render_template, request, redirect,url_for
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -24,41 +22,33 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 
-@app.route("/")
+@app.route("/", methods = ["GET", "POST"])
 def index():
-    return "Project 1: TODO. Yayy!!"
+    if request.method == "GET":
+        if session.get('data') is not None:
+            return render_template("login.html", name = session.get("data"))
+        return redirect(url_for("register"))
 
 @app.route("/register", methods=["GET","POST"])
 def register():
     if request.method == "GET":
         return render_template("registration.html")
-    else:
-        if request.form["button"]=="Sign In":
-            email = request.form.get("emailId")
-            paswd = request.form.get("password")
-            passwd = generate_password_hash(paswd)
-            user = User.query.get(email)
-            if user is not None:
-                if passwd == user.password:
-                    return render_template("login.html")
-                else:
-                    return "wrong password"
-            else:
-                return "wrong emailId /not registered"
-
-        elif request.form["button"]=="Sign Up":
-            name = request.form.get('Username')
-            email = request.form.get('email')
-            pwd = request.form.get('password1')
-            password = generate_password_hash(pwd)
-            repwd = request.form.get('password2')
-            if pwd == repwd:
-                user = User(email, name, password)
+    elif request.form["button"]=="Sign Up" and request.method == "POST":
+        name = request.form.get('Username')
+        email = request.form.get('email')
+        pwd = request.form.get('password1')
+        password = generate_password_hash(pwd)
+        repwd = request.form.get('password2')
+        if pwd == repwd:
+            user = User(email, name, password)
+            try:
                 db.session.add(user)
-                db.session.commit()
-                return "Thank you for registering {}. :)".format(name)
-            else:
-                return "passwords do not match. Kindly try again."
+            except:
+                return "Registration Unsuccessful. Please Register Again"
+            db.session.commit()
+            return redirect(url_for("register"))
+        else:
+            return "passwords do not match. Please try again."
                 
 @app.route("/admin")
 def admin():
@@ -68,3 +58,24 @@ def admin():
 @app.route("/login")
 def login():
     return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("register"))
+
+@app.route("/auth", methods = ["POST"])
+def auth():
+    email = request.form.get("emailId")
+    paswd = request.form.get("password")
+    passwd = generate_password_hash(paswd)
+    user = User.query.get(email)
+    if user is not None:
+        if passwd == user.password:
+            return render_template("login.html",name =user.name)
+        else:
+            return "wrong password"
+    else:
+        return "wrong emailId /not registered"
+
+        
