@@ -9,12 +9,12 @@ class User(db.Model):
 	name = db.Column(db.String, nullable = False)
 	password = db.Column(db.String, nullable = False)
 	timestamp = db.Column(db.DateTime, nullable = False)
-	
+
 	def __init__(self, email, name, password):
 		self.email = email
 		self.name = name
 		self.password = password
 		self.timestamp = datetime.now()
-	
+
 	def __repr__(self):
 		return '<User %r>' % (self.email)
