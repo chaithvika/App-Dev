@@ -13,10 +13,10 @@
                 <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
                 <div class="login-form">
                     <div class="sign-in-htm">
-                        <form method = "POST">
+                        <form method = "POST" action = "{{url_for('auth')}}">
                             <div class="group">
-                                <label for="user" class="label">Username</label>
-                                <input id="user" type="text" class="input" name="name">
+                                <label for="user" class="label">emailId</label>
+                                <input id="user" type="text" class="input" name="emailId">
                             </div>
                             <div class="group">
                                 <label for="pass" class="label">Password</label>
@@ -27,7 +27,7 @@
                                 <label for="check"><span class="icon"></span> Keep me Signed in</label>
                             </div>
                             <div class="group">
-                                <input type="submit" class="button" value="Sign In">
+                                <input type="submit" class="button" name = "button" value="Sign In">
                             </div>
                         </form>
                         <div class="hr"></div>
@@ -54,7 +54,7 @@
                                 <input id="pass" type="text" class="input" name="email">
                             </div>
                             <div class="group">
-                                <input type="submit" class="button" value="Sign Up">
+                                <input type="submit" class="button" name = "button" value="Sign Up">
                             </div>
                         </form>
                         <div class="hr"></div>
